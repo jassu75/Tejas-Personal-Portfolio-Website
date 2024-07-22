@@ -115,8 +115,10 @@ form.addEventListener('submit', (event) => {
   .then(response => {
     if (response.ok) {
       document.getElementById('form-response').innerText = "Thank you for your message!";
+      alert("Message sent successfully. Will respond to you soon.")
     } else {
       document.getElementById('form-response').innerText = "Oops! There was a problem with your submission.";
+      alert("Unable to sent your message. Please retry with correct entries")
     }
   })
   .catch(error => console.error('Error:', error));
