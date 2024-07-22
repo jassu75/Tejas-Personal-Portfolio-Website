@@ -1299,29 +1299,32 @@
         
 
         <section class="contact-form">
-          <h3 class="h3 form-title">Contact Form</h3>
-        
-          <!-- Add data-netlify="true" attribute to the form element -->
-          <form action="#" method="POST" name="contact" data-netlify="true" data-form>
-            <!-- Hidden input to specify the form name -->
-            <input type="hidden" name="form-name" value="contact">
-        
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-        
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-        
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-          </form>
-        
-          <!-- Add a response div to display success or error messages -->
-          <div id="form-response"></div>
-        </section>
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
+          
+            <form action="/" method="POST" name="contact" data-netlify="true" data-form>
+              <!-- Hidden input to specify the form name -->
+              <input type="hidden" name="form-name" value="contact">
+              <p style="display: none;">
+                <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+              </p>
+          
+              <div class="input-wrapper">
+                <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              </div>
+          
+              <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+          
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          
+            <div id="form-response"></div>
+          </section>
+          
         
 
       </article>
