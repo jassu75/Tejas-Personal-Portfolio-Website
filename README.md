@@ -1,44 +1,20 @@
-# vCard - Personal portfolio
+# Personal Portfolio Website of Tejas V Kangod
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+This project was made by Tejas V Kangod. It is a one pit stop to get my complete information.  
+ **[Personal Portfolio Website Link](https://tejaskangodportfolio.netlify.app/)**
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+ ![image](https://github.com/user-attachments/assets/8727234f-012c-4658-91cd-7e3eb60f2b13)
 
-## Demo
+ ![image](https://github.com/user-attachments/assets/11bfdc40-c375-4346-81cc-7e687967de83)
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+ ![image](https://github.com/user-attachments/assets/4d22ed62-81c5-41b9-a4b5-747c1d92eac3)
 
-## Prerequisites
+ ![image](https://github.com/user-attachments/assets/2fa45c1f-2803-4094-84a7-783b85a735f6)
 
-Before you begin, ensure you have met the following requirements:
+ ![image](https://github.com/user-attachments/assets/5f42654d-728b-4347-a9aa-370af361c795)
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
 
-## Installing vCard
 
-To install **vCard**, follow these steps:
 
-Linux and macOS:
 
-```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
 
-Windows:
-
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-## Contact
-
-If you want to contact me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
-
-## License
-
-MIT
