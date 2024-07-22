@@ -117,17 +117,14 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
+// enable submit button if form is valid
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
-
-    // check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
     } else {
       formBtn.setAttribute("disabled", "");
     }
-
   });
 }
 
@@ -141,6 +138,21 @@ form.addEventListener('submit', function (event) {
   // Optionally, reset the form
   form.reset();
   formBtn.setAttribute('disabled', '');
+
+  // For Netlify, allow form submission to proceed
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(new FormData(form)).toString()
+  })
+  .then(response => {
+    if (response.ok) {
+      document.getElementById('form-response').innerHTML = "Thank you for your message!";
+    } else {
+      document.getElementById('form-response').innerHTML = "Oops! There was a problem with your submission.";
+    }
+  })
+  .catch(error => console.error('Error:', error));
 });
 
 // page navigation variables
