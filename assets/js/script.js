@@ -145,3 +145,42 @@ navigationLinks.forEach(link => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lionLogo = document.getElementById('lion-logo');
+  const roarSound = document.getElementById('roar-sound');
+  const navigationLinks = document.querySelectorAll("[data-nav-link]");
+  const pages = document.querySelectorAll("[data-page]");
+
+  const triggerLionAnimation = () => {
+    lionLogo.classList.add('animate');
+    
+    // Restart the roar sound if it is already playing
+    if (!roarSound.paused) {
+      roarSound.currentTime = 0;
+    }
+    roarSound.play();
+    
+    setTimeout(() => lionLogo.classList.remove('animate'), 1000); // Match the animation duration
+  };
+
+  // Trigger animation and sound on page load
+  triggerLionAnimation();
+
+  // Trigger animation and sound on navigation link click
+  navigationLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      pages.forEach(page => {
+        if (link.innerHTML.toLowerCase() === page.dataset.page) {
+          page.classList.add("active");
+          link.classList.add("active");
+          window.scrollTo(0, 0);
+        } else {
+          page.classList.remove("active");
+          link.classList.remove("active");
+        }
+      });
+      triggerLionAnimation();
+    });
+  });
+});
