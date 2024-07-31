@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+        }
+        .welcome-message {
+            font-size: 3rem;
+            color: white;
+            animation: fadeIn 3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-message">Welcome</div>
+    <script>
+        // Redirect to index.html after 5 seconds
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 5000); // Adjust time as needed
+    </script>
+</body>
+</html>

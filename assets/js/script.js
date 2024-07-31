@@ -118,7 +118,7 @@ form.addEventListener('submit', (event) => {
       alert("Message sent successfully. Will respond to you soon.")
     } else {
       document.getElementById('form-response').innerText = "Oops! There was a problem with your submission.";
-      alert("Unable to sent your message. Please retry with correct entries")
+      alert("Unable to send your message. Please retry with correct entries")
     }
   })
   .catch(error => console.error('Error:', error));
@@ -161,7 +161,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     roarSound.play();
     
-    setTimeout(() => lionLogo.classList.remove('animate'), 1000); // Match the animation duration
+    setTimeout(() => {
+      lionLogo.classList.remove('animate');
+    }, 3000); // Total duration of 3s for all animations
   };
 
   // Trigger animation and sound on page load
