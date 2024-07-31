@@ -4,35 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
-            overflow: hidden;
-        }
-        .welcome-message {
-            font-size: 3rem;
-            color: white;
-            animation: fadeIn 3s ease-in-out;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/stylewelcome.css"> <!-- Link to the CSS file -->
 </head>
 <body>
-    <div class="welcome-message">Welcome</div>
-    <script>
-        // Redirect to index.html after 5 seconds
-        setTimeout(() => {
-            window.location.href = 'index.html';
-        }, 5000); // Adjust time as needed
-    </script>
+    <div class="welcome-container">
+        <div class="welcome-message" id="welcome-message">Welcome</div>
+    </div>
+    <div class="dialog-overlay" id="dialog-overlay">
+        <div class="dialog-box">
+            <p class="dialog-text">Would you like to proceed to the main page?</p>
+            <button id="yes-button">Yes</button>
+            <button id="no-button">No</button>
+        </div>
+    </div>
+    <script src="assets/js/welcome.js"></script> <!-- Link to the external JavaScript file -->
 </body>
 </html>
