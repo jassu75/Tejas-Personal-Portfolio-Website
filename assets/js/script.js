@@ -8,8 +8,8 @@ const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", () => elementToggleFunc(sidebar));
 
-// Testimonials modal functionality
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+// achievements modal functionality
+const achievementsItem = document.querySelectorAll("[data-achievements-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
@@ -18,19 +18,19 @@ const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
-const testimonialsModalFunc = () => {
+const achievementsModalFunc = () => {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
 
-testimonialsItem.forEach(item => {
+achievementsItem.forEach(item => {
   item.addEventListener("click", (event) => {
     if (event.target.tagName.toLowerCase() !== 'a') {
-      modalImg.src = item.querySelector("[data-testimonials-avatar]").src;
-      modalImg.alt = item.querySelector("[data-testimonials-avatar]").alt;
-      modalTitle.innerHTML = item.querySelector("[data-testimonials-title]").innerHTML;
-      modalText.innerHTML = item.querySelector("[data-testimonials-text]").innerHTML;
-      testimonialsModalFunc();
+      modalImg.src = item.querySelector("[data-achievements-avatar]").src;
+      modalImg.alt = item.querySelector("[data-achievements-avatar]").alt;
+      modalTitle.innerHTML = item.querySelector("[data-achievements-title]").innerHTML;
+      modalText.innerHTML = item.querySelector("[data-achievements-text]").innerHTML;
+      achievementsModalFunc();
     }
   });
 
@@ -41,8 +41,8 @@ testimonialsItem.forEach(item => {
   });
 });
 
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+modalCloseBtn.addEventListener("click", achievementsModalFunc);
+overlay.addEventListener("click", achievementsModalFunc);
 
 // Custom select functionality
 const select = document.querySelector("[data-select]");
