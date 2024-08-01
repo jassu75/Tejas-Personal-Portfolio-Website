@@ -1,4 +1,6 @@
 /* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
     margin: 0;
     display: flex;
@@ -24,14 +26,14 @@ body {
 .welcome-message {
     font-size: 12rem; /* Adjust font size as needed */
     color: white;
-    font-family: 'Courier New', Courier, monospace; /* Handwritten look */
+    font-family: 'Pacifico', cursive;
     position: relative;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    transform: rotate(-10deg); /* Slant the text */
-    transform-origin: center;
-    animation: write 4s steps(40, end) forwards, fadeIn 4s ease-in-out;
+    transform: rotate(-10deg); 
+    animation: write 3s steps(40, end) forwards, fadeIn 3s ease-in-out;
+    
 }
 
 @keyframes write {
@@ -45,46 +47,23 @@ body {
     100% { opacity: 1; }
 }
 
-.dialog-overlay {
-    position: absolute;
-    top: 70%; /* Position below the welcome message */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%; /* Adjust width as needed */
-    max-width: 600px;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+#video-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 320px; 
+    height: 500px; 
+    transform: scale(2);
 }
 
-.dialog-box {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 100%;
+#video-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 320px; 
+    height: 500px;
+    transform: scale(2);
+
+
 }
 
-.dialog-text {
-    margin-bottom: 20px;
-}
-
-.dialog-box button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.dialog-box button:hover {
-    background-color: #0056b3;
-}

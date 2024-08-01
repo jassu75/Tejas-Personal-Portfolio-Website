@@ -7,16 +7,19 @@
     <link rel="stylesheet" href="assets/css/stylewelcome.css"> <!-- Link to the CSS file -->
 </head>
 <body>
+    <video id="video-left" autoplay muted loop>
+        <source src="assets/video/firecrakerwelcome.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <video id="video-right" autoplay muted loop>
+        <source src="assets/video/firecrakerwelcome.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <div class="welcome-container">
         <div class="welcome-message" id="welcome-message">Welcome</div>
     </div>
-    <div class="dialog-overlay" id="dialog-overlay">
-        <div class="dialog-box">
-            <p class="dialog-text">Would you like to proceed to the main page?</p>
-            <button id="yes-button">Yes</button>
-            <button id="no-button">No</button>
-        </div>
-    </div>
+    
     <script src="assets/js/welcome.js"></script> <!-- Link to the external JavaScript file -->
 </body>
 </html>
