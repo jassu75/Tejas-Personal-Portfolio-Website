@@ -31,9 +31,9 @@ body {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    transform: rotate(-10deg); 
+    transform: rotate(-10deg);
     animation: write 3s steps(40, end) forwards, fadeIn 3s ease-in-out;
-    
+    z-index: 2;
 }
 
 @keyframes write {
@@ -63,7 +63,41 @@ body {
     width: 320px; 
     height: 500px;
     transform: scale(2);
-
-
 }
 
+/* New styles for rope effect */
+.rope {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px; 
+    height: 0; /* Start with zero height */
+    background: #333; /* Rope color */
+    transform: translateX(-50%);
+    animation: rope-fall 3s ease-in-out forwards;
+    animation-delay: 3s; 
+}
+
+@keyframes rope-fall {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 60vh;
+    }
+}
+
+@keyframes pull-text {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+/* Additional class to trigger text pull */
+.pull-text {
+    animation: pull-text 3s ease-in-out forwards;
+    animation-delay: 1s; /* Start after text animations */
+}

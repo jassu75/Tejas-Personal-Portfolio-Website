@@ -419,7 +419,7 @@ main {
 .sidebar-info_more {
   opacity: 0;
   visibility: hidden;
-  transition: var(--transition-2);
+  transition: var(--transition-2);achievements
 }
 
 .sidebar.active .sidebar-info_more {
